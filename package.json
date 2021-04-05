@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/wendleypf/js-functional-reactive/issues"
   },
-  "homepage": "https://github.com/wendleypf/js-functional-reactive#readme"
+  "homepage": "https://github.com/wendleypf/js-functional-reactive#readme",
+  "devDependencies": {
+    "git-commit-msg-linter": "^3.1.0"
+  }
 }
