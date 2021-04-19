@@ -5,6 +5,7 @@
 /**
  * @param {number} min
  * @param {number} max
+ * @returns {Promise<number>}
  */
 function generateNumberBetween(min, max) {
   if (min > max) {
