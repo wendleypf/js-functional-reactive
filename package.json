@@ -19,6 +19,7 @@
   "homepage": "https://github.com/wendleypf/js-functional-reactive#readme",
   "devDependencies": {
     "faker": "^5.5.2",
-    "git-commit-msg-linter": "^3.1.0"
+    "git-commit-msg-linter": "^3.1.0",
+    "jsdoc": "^3.6.6"
   }
 }
