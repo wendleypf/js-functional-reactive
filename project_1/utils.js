@@ -110,7 +110,7 @@ const sortBy = (props, type = 'asc') => {
   return function (array) {
     const asc = (a, b) => a[props] - b[props]
     const desc = (a, b) => b[props] - a[props]
-    return array.sort(type === 'asc' ? asc : desc)
+    return [...array].sort(type === 'asc' ? asc : desc)
   }
 }
 
@@ -153,6 +153,18 @@ function readDirSync(directoryPath) {
   })
 }
 
+function composition(...fns) {
+  return function (value) {
+    return fns.reduce(async (v, fn) => {
+      if (Promise.resolve(v) === v) {
+        return fn(await v)
+      } else {
+        return fn(v)
+      }
+    }, value)
+  }
+}
+
 module.exports = {
   filterFilesWithTheExtension,
   isAFileWithTheExtension,
@@ -167,5 +179,6 @@ module.exports = {
   sortBy,
   readFile,
   readFiles,
-  readDirSync
+  readDirSync,
+  composition
 }
