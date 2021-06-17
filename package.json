@@ -23,6 +23,7 @@
     "jsdoc": "^3.6.7"
   },
   "dependencies": {
+    "lodash": "^4.17.21",
     "rxjs": "^7.1.0",
     "xhr2": "^0.2.1",
     "xmlhttprequest": "^1.8.0"
